@@ -39,7 +39,7 @@ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add
 /usr/bin/envsubst '$LOGSTASH_HOST $CACHE_LOGS_DIRECTORY' < "$SCRIPT_DIR/configs/filebeat.yml.templ" > "/etc/filebeat/filebeat.yml"
 
 # Set filebeat to run at boot
-/bin/systemctl enable filebeat
+# /bin/systemctl enable filebeat
 
 # Start filebeat
-/bin/systemctl start filebeat
+# /bin/systemctl start filebeat
