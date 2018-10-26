@@ -21,7 +21,7 @@ if [[ ! -f /etc/apt/sources.list.d/elastic-6.x.list ]]; then
 fi
 
 # Install the key for the elastic repo
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+curl https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
 
 # Install required packages
 /usr/bin/apt update -y
